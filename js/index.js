@@ -116,8 +116,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // call the displayQuiz function
   displayQuiz();
 
-  // const quizTimeout = setTimeout(calculateScore, 60000);
-
   const submit = document.querySelector("#btnSubmit");
   submit.addEventListener("click", function (e) {
     calculateScore();
@@ -125,7 +123,5 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("time").innerHTML = "Your results:"
 
   })
-
-  
 
 });
