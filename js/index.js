@@ -108,6 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const calculatedScore = document.querySelector('#calculatedScore');
   calculatedScore.innerHTML = `You got ${score} out of 5 questions correct`;
+  scroll(0,0);
   
 };
 
@@ -121,6 +122,7 @@ window.addEventListener("DOMContentLoaded", () => {
     calculateScore();
     clearInterval(downloadTimer);
     document.getElementById("time").innerHTML = "Your results:"
+
   })
 
   
