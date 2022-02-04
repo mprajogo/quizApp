@@ -97,7 +97,7 @@ window.addEventListener("DOMContentLoaded", () => {
           liElement.style.backgroundColor = 'green';
           score++;
           }else{
-            liElement.style.color = 'red';
+            liElement.style.backgroundColor = 'red';
           }
         }
         
@@ -114,7 +114,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // call the displayQuiz function
   displayQuiz();
 
-  const quizTimeout = setTimeout(calculateScore, 61000);
+  const quizTimeout = setTimeout(calculateScore, 62000);
 
   const submit = document.querySelector("#btnSubmit");
   submit.addEventListener("click", function (e) {
