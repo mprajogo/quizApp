@@ -7,43 +7,58 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!-- Bootstrap CSS -->
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    
+
     <title>Quiz</title>
   </head>
-  <body>  
+  <body class="bg-image" style="
+    background-image: url('background.gif');
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    ">
+    
     <div class="container" id="start">
       <div class="card" style="text-align: center">
         <div class="card-body">
-          <h5 class="card-title">Test your knowledge</h5>
-          <p class="card-text">Some quick description about the quiz .</p>
-          <a class="btn btn-primary">Start</a>
+          <h1 class="card-title">Test Your Knowledge</h1>
+          <p class="card-text">Exercise your brain muscles by taking our general knowledge quiz!</p>
+          <button class="btn btn-lg btn-block" style="background-color: #73AD21; color: white;">Start</button>
         </div>
       </div>
     </div>
 
     <!-- (B) QUIZ CONTAINER -->
     <div class="container" id="quizBlock" style="display: none">
-      <div class="mb-5">
-        <h2>Test your knowledge</h2>
+      <div class="mb-5" style="text-align: center">
+        <h1>Test Your Knowledge</h1>
         
-        <span id="time">Your time starts now!</span>
+        <h2 id="time" style="
+          border-radius: 25px;
+          background: #73AD21;
+          height: 60px;
+          width: 50%;
+          margin: auto;
+          padding: 10px 10px 10px 10px;
+          color: white;
+        " >Your time starts now!</h2>
         <br>
-        <span id="calculatedScore"></span>
+        <h3 id="calculatedScore" style="color: royalblue;"></h3>
       </div>
       
       <div id="quizWrap"></div>
 
-      <div>
+      <div class="buttons">
         <button type="button" class="btn btn-primary" id="btnSubmit">
           Submit Quiz
         </button>
-        <button onClick="window.location.reload();" type="button" class="btn btn-primary" id="btnReset">
+        <button onClick="window.location.reload();" type="button" class="btn btn-secondary" id="btnReset">
           Reset Quiz
         </button>
         <span id="score"></span>

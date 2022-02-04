@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let quizDisplay = "";
     quizArray.map((quizItem, index) => {
       quizDisplay += `<ul class="list-group">
-                   Q - ${quizItem.q}
+                   <h4>Q - ${quizItem.q}</h4>
                     <li class="list-group-item mt-2" id="li_${index}_0"><input type="radio" name="radio${index}" id="radio_${index}_0"> ${quizItem.o[0]}</li>
                     <li class="list-group-item" id="li_${index}_1"><input type="radio" name="radio${index}" id="radio_${index}_1"> ${quizItem.o[1]}</li>
                     <li class="list-group-item"  id="li_${index}_2"><input type="radio" name="radio${index}" id="radio_${index}_2"> ${quizItem.o[2]}</li>
@@ -94,10 +94,10 @@ window.addEventListener("DOMContentLoaded", () => {
       
         if(radioElement.checked){
           if(quizItem.a == i){
-          liElement.style.backgroundColor = 'green';
+          liElement.style.border = 'thick solid green';
           score++;
           }else{
-            liElement.style.backgroundColor = 'red';
+            liElement.style.border = 'thick solid #db655c';
           }
         }
         
@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
   );
 
   const calculatedScore = document.querySelector('#calculatedScore');
-  calculatedScore.innerHTML = `Your score is ${score}/5`;
+  calculatedScore.innerHTML = `You got ${score} out of 5 questions correct`;
   
 };
 
@@ -120,7 +120,7 @@ window.addEventListener("DOMContentLoaded", () => {
   submit.addEventListener("click", function (e) {
     calculateScore();
     clearInterval(downloadTimer);
-    document.getElementById("time").innerHTML = "Well done!"
+    document.getElementById("time").innerHTML = "Your results:"
   })
 
   
