@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if(timeleft <= 0){
       clearInterval(downloadTimer);
       document.getElementById("time").innerHTML = "Time is up!"
+      calculateScore();
       }
     }, 1000);
 
@@ -115,7 +116,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // call the displayQuiz function
   displayQuiz();
 
-  const quizTimeout = setTimeout(calculateScore, 62000);
+  // const quizTimeout = setTimeout(calculateScore, 60000);
 
   const submit = document.querySelector("#btnSubmit");
   submit.addEventListener("click", function (e) {
