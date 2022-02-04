@@ -93,14 +93,15 @@ window.addEventListener("DOMContentLoaded", () => {
         radioElement = document.querySelector("#" + r);
 
         if (quizItem.a == i) {
-          liElement.style.border = 'medium solid green';
-
+          liElement.style.backgroundColor = 'green';
+          liElement.style.color = 'white';
 
         }
       
         if(radioElement.checked){
           if(quizItem.a == i){
-          liElement.style.border = 'medium solid green';
+          liElement.style.backgroundColor = 'green';
+          liElement.style.color = 'white';
           liElement.style.fontWeight = 'bold';
 
           score++;
