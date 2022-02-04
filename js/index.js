@@ -93,15 +93,22 @@ window.addEventListener("DOMContentLoaded", () => {
         radioElement = document.querySelector("#" + r);
 
         if (quizItem.a == i) {
-          liElement.style.border = 'thick solid green';
+          liElement.style.backgroundColor = 'green';
+          liElement.style.color = 'white';
+
         }
       
         if(radioElement.checked){
           if(quizItem.a == i){
-          liElement.style.border = 'thick solid green';
+          liElement.style.backgroundColor = 'green';
+          liElement.style.color = 'white';
+          liElement.style.fontWeight = 'bold';
+
           score++;
           }else{
-            liElement.style.border = 'thick solid #db655c';
+            liElement.style.color = '#c24444';
+            liElement.style.fontWeight = 'bold';
+
           }
         }
         
