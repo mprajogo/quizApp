@@ -92,6 +92,9 @@ window.addEventListener("DOMContentLoaded", () => {
         liElement = document.querySelector("#" + li);
         radioElement = document.querySelector("#" + r);
 
+        if (quizItem.a == i) {
+          liElement.style.border = 'thick solid green';
+        }
       
         if(radioElement.checked){
           if(quizItem.a == i){
